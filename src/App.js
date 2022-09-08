@@ -1,4 +1,8 @@
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
+import ReactDom from "react-dom";
+
+import Form from "./Form"
+// import SimpleForm from "./simpleform";
 // import ReactDOM from "react-dom";
 
 import "./styles.css";
@@ -9,15 +13,15 @@ function App() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   // User Login info
-  const database = [
-    {
-      username: "user1",
-      password: "pass1"
-    },
-    {
-      username: "user2",
-      password: "pass2"
-    }
+  var database = 
+  [
+    // useEffect(() => {
+    //   const items = JSON.parse(localStorage.getItem('items'));
+    //   if (items) {
+    //    setItems(items);
+    //   }
+    // }, []);
+    // SimpleForm
   ];
 
   const errors = {
@@ -77,6 +81,9 @@ function App() {
 
   return (
     <div className="app">
+      <div className="signup">
+        <Form />
+      </div>
       <div className="login-form">
         <div className="title">Sign In</div>
         {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
