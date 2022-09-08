@@ -14,15 +14,15 @@ function App() {
 
   // User Login info
   var database = 
-  [
-    // useEffect(() => {
-    //   const items = JSON.parse(localStorage.getItem('items'));
-    //   if (items) {
-    //    setItems(items);
-    //   }
-    // }, []);
+  // [
+    useEffect(() => {
+      const items = JSON.parse(localStorage.getItem('datakey'));
+      if (items) {
+      //  setItem(items);
+      }
+    }, []);
     // SimpleForm
-  ];
+  // ];
 
   const errors = {
     uname: "invalid username",
